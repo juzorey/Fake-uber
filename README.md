@@ -97,6 +97,6 @@ do they each have own contract and the money gets transfered to contract
 
 - when driving the both locations from driver and rider will move along map on both riders and drivers side
 - when the rider gets to the drop locaiton of the rider both rider and driver confirm its the location and record the end of the trip for rider and driver
-- when ride check in which is the same as the trip ending, the active is changed to flase and they can checkout another ride
-- 
+- when ride check in which is the same as the trip ending, the active is changed to false and they can checkout another ride
+
 
