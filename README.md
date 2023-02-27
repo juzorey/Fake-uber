@@ -43,3 +43,5 @@ connect contract the the frontend
 what should the contract do and what should javascript or other api do
 where should the location go instead
 
+use useEffect and useState and useContext
+making tabs with active and calenders
