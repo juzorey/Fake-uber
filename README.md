@@ -69,8 +69,14 @@ do they each have own contract and the money gets transfered to contract
 - add new driver
 - add new rider
 
+##security issue and scam issue
+- when should the payment be sent.
+- if its when the the ride starts how would the ride start. the rider starts and and driver confirm that the are in the car
+-? at start of the trip the rider will send money to the contract when ride is completet the money will be sent to the driver?
 
-when riding
+
+
+##when riding
 - know when the rider is active(available to ride, not on a trip) -- this will the variable that depends if they can check out a ride
 - know when the driver is active(available to drive, not on a trip)
 - the rider and the driver will have their balance display 
@@ -83,10 +89,9 @@ when riding
 - if the rider can checkout then add the rider to the list of riders in the trip 
 - the driver gets to see the added rider to the trip along with their seat amount and new route combined and get to choose to accept them to the ride or not
 - when the driver accepts the riders request the the rider gets added through their wallet address to the contract
-- i think the owner of the contract will be the one who deploys it which  the run deploying it would be the driver
-- 
-- record the start of a trip for rider and driver
-- at start of the trip the rider will send money to the contract when ride is completet the money will be sent to the driver
+- i think the owner of the contract will be the one who deploys it which the run deploying it would be the driver
+- At the start of the trip the rider will confirm they are with the driver and the driver will confirm they are with the rider and the money will be trasnfered from the rider to the contract and the money will be sent to the owner.
+- the duration of trip of will also start then and record the start of a trip for rider and driver
 - or the money is sent when the driver brings the rider to the location or when the ride is ending
 - record the end of the trip for rider and driver
 - when ride check out starts the time starts and the active is changed to true and they cant checkout another ride
