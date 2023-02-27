@@ -39,3 +39,7 @@ connect contract the the frontend
 -shows where they are currently when starting the drive
 - display how many seats they have open in the the object
 - shows the amount per seat in the object
+
+what should the contract do and what should javascript or other api do
+where should the location go instead
+
