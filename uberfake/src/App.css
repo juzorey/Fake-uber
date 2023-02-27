@@ -1,0 +1,112 @@
+
+.rider-container{
+  border: orange 1px solid;
+  width: 25rem;
+  height: 35rem;
+  background-color: aliceblue;
+  border-radius: 7px;
+  box-shadow: 0 4px 4px rgb(0 0 0 / 25%);
+  display: flex;
+  justify-content: center;
+  padding: 10px 10px 10px 10px;
+
+}
+.container{
+ padding: 10px; 
+ width: 380px;
+ height: 550px;
+ background-color: transparent;
+ border-radius: 7px;
+ box-shadow: 0 4px 4px rgb(0 0 0 / 25%);
+ border: blue 1px solid;
+ /* transition: opacity .15s ease; */
+
+}
+.la{
+  display: flex;
+  flex-direction: column;
+  grid-gap: 8px;
+}
+.inner-container{
+  margin-top: -40px;
+  border: red solid 1px;
+  padding:10px;
+}
+
+h2{
+  font-family: 'Golos Text', sans-serif;
+}
+.search-box{
+  width: 350px;
+  height: 40px;
+  background-color: rgb(145, 145, 145);
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+}
+.inner-search-box{
+  width: 330px;
+  height: 35px;
+  background-color: trans;
+  margin-top: 2.5px;
+  margin-left: 15px;
+}
+.input-search{
+  width: 310px;
+  height: 30px;
+  border: 0;
+  margin-top: 2px;
+  outline: none;
+  background: transparent;
+  color: white;
+
+
+}
+.input-search::placeholder{
+  color: white;
+}
+
+.icon-search{
+  color: white;
+}
+
+
+.in-btn{
+  margin-left: -240px;
+
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
