@@ -73,6 +73,7 @@ do they each have own contract and the money gets transfered to contract
 - when should the payment be sent.
 - if its when the the ride starts how would the ride start. the rider starts and and driver confirm that the are in the car
 -? at start of the trip the rider will send money to the contract when ride is completet the money will be sent to the driver?
+- or the money is sent when the driver brings the rider to the location or when the ride is ending
 
 
 
@@ -88,13 +89,14 @@ do they each have own contract and the money gets transfered to contract
 - if the rider balance is greater than the seats payment then allow them to checkout that ride
 - if the rider can checkout then add the rider to the list of riders in the trip 
 - the driver gets to see the added rider to the trip along with their seat amount and new route combined and get to choose to accept them to the ride or not
-- when the driver accepts the riders request the the rider gets added through their wallet address to the contract
+- when the driver accepts the riders request the the rider gets added through their wallet address to the contract and check out of the rider is set to true and the driver checkout is set to true
 - i think the owner of the contract will be the one who deploys it which the run deploying it would be the driver
 - At the start of the trip the rider will confirm they are with the driver and the driver will confirm they are with the rider and the money will be trasnfered from the rider to the contract and the money will be sent to the owner.
-- the duration of trip of will also start then and record the start of a trip for rider and driver
-- or the money is sent when the driver brings the rider to the location or when the ride is ending
-- record the end of the trip for rider and driver
-- when ride check out starts the time starts and the active is changed to true and they cant checkout another ride
+- the duration of trip of will also start then and record the start of a trip for rider and driver, the riders check out is now true
+- when the trip starting, the active is changed to true and they cant checkout another ride
 
+- when driving the both locations from driver and rider will move along map on both riders and drivers side
+- when the rider gets to the drop locaiton of the rider both rider and driver confirm its the location and record the end of the trip for rider and driver
+- when ride check in which is the same as the trip ending, the active is changed to flase and they can checkout another ride
 - 
 
