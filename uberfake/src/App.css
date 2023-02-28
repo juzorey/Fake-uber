@@ -1,4 +1,9 @@
 
+#map{
+  height: 900px;
+  width: 900px;
+}
+
 .rider-container{
   border: orange 1px solid;
   width: 25rem;
