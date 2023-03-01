@@ -21,7 +21,7 @@ export default function RiderHome(){
           <div className="search-box">
             <div className="inner-search-box">
               <form className="form-search">
-                <FaSearch className='icon-search' />
+                {/* <FaSearch className='icon-search' /> */}
                 <button className="input-search" onClick={showSearch}> <span className="in-btn">Where to?</span></button>
 
               </form>

@@ -15,7 +15,7 @@ export default function PickupLocation() {
               <div className="search-box">
                 <div className="inner-search-box">
                   <form className="form-search">
-                  <RxDot className='icon-search' />
+                  {/* <RxDot className='icon-search' /> */}
                     <input className="input-search" type="text" role="searchbox" placeholder="Pickup Location" />
                   </form>
                 </div>
@@ -26,7 +26,7 @@ export default function PickupLocation() {
                 <div className="search-box">
                   <div className="inner-search-box">
                     <form className="form-search">
-                      <RxDot className='icon-search' />
+                      {/* <RxDot className='icon-search' /> */}
                       <input className="input-search" type="text" role="searchbox" placeholder="Destination" />
                     </form>
                   </div>

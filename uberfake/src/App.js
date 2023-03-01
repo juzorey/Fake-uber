@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
+import NavBar from './comp/NavBar';
 import PickupLocation from './comp/PickupLocation';
 import RiderHome from './comp/RiderHome';
 import { CSSTransition } from 'react-transition-group';
@@ -27,12 +28,22 @@ function App() {
 
   return (
     <div className="main">
-      <div className="map-container"><Map/></div>
-      <Routes>
-        <Route path="/" element={<RiderHome/>}></Route>
-        <Route path="/PickupLocation" element={<PickupLocation/>}></Route>
+      <div className="nav-bar">
+       <NavBar />
+      </div>
 
-      </Routes>
+      <div className="map-container"><Map/></div>
+      
+      <div className="locater">
+        <Routes>
+          <Route path="/" element={<RiderHome/>}></Route>
+          <Route path="/PickupLocation" element={<PickupLocation/>}></Route>
+
+        </Routes>
+      </div> 
+{/* 
+
+       //can render th list of trips with map and event and have it props to a omp to display and return */}
       
     </div>
   );
