@@ -9,10 +9,12 @@ export default function NavBar() {
           <div className="homelink">
             <Link to="/" className="link-style">UberFake</Link>
           </div>
-          <Link to className="link-style">Account</Link>
-          <Link to className="link-style">Wallet</Link>
+  
+          <Link to="/Rider" className="link-style">Rider</Link>
+          <Link to="/Driver" className="link-style">Driver</Link>
           <Link to className="link-style">Trips</Link>
-        </div>
+          <Link to className="link-style">Account/Wallet</Link>
+        </div> 
       </nav>
 
       

@@ -4,12 +4,12 @@ import {FaSearch} from 'react-icons/fa'
 import {IoMdArrowRoundBack} from 'react-icons/io'
 import React from "react"
 
-export default function RiderHome(){
+export default function DriverHome(){
 
 
   let nav=useNavigate()
   const showSearch = () => {
-  nav('PickupLocation')
+  nav('/DriverPickupLocation')
   }
 
   return(
@@ -18,7 +18,7 @@ export default function RiderHome(){
       <div className="container">
         <div className="inner-container">
         
-         <h2> Rider where would you like to be picked up?</h2>
+         <h2> Driver Start a Trip</h2>
 
           <div className="search-box">
             <div className="inner-search-box">
