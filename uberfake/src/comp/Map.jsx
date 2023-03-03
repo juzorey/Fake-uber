@@ -21,7 +21,6 @@ const Token= `pk.eyJ1Ijoiam9zZXIxMTcxIiwiYSI6ImNsZW5hbXNudTFkYXgzeHF2bHpkcDJlOWQ
 
 
 
-
 useEffect(()=>{
 
   // const changeLocation = () => {
@@ -56,19 +55,24 @@ map.setMaxBounds(bounds);
 
 // an arbitrary start will always be the same
 // only the end or destination will change
-const start = [pickUpLocation.locationStartLat, pickUpLocation.locationStartLng]; //-117.852787, 33.762934 //-122.662323, 45.523751
-console.log(start,'start')
+ //-117.852787, 33.762934 //-122.662323, 45.523751
 // this is where the code for the next step will go
 
 // create a function to make a directions request
+const start = [pickUpLocation.locationStartLat, pickUpLocation.locationStartLng];
+
+console.log(start,'start')
 async function getRoute(end) {
   // make a directions request using cycling profile
   // an arbitrary start will always be the same
   // only the end or destination will change
+  
   const query = await fetch(
     `https://api.mapbox.com/directions/v5/mapbox/cycling/${start[0]},${start[1]};${end[0]},${end[1]}?steps=true&geometries=geojson&access_token=${mapboxgl.accessToken}`,
     { method: 'GET' }
   );
+  
+  console.log(query,'query')
   const json = await query.json();
   const data = json.routes[0];
   const route = data.geometry.coordinates;
@@ -150,7 +154,7 @@ map.on('click', (event) => {
         properties: {},
         geometry: {
           type: 'Point',
-          coordinates: [-118.24904893295182, 34.03427605147586]
+          coordinates: coords
         }
       }
     ]
@@ -173,7 +177,7 @@ map.on('click', (event) => {
               properties: {},
               geometry: {
                 type: 'Point',
-                coordinates: [-118.24904893295182, 34.03427605147586]
+                coordinates: coords
               }
             }
           ]
@@ -185,11 +189,12 @@ map.on('click', (event) => {
       }
     });
   }
-  getRoute([-118.24904893295182, 34.03427605147586]);
+  getRoute(coords);
 });
 
 
-},[])
+},[pickUpLocation])
+
 
 
 
