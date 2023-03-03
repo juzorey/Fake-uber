@@ -34,11 +34,19 @@ function App() {
 // ));
 
 const[pickUpLocation,  setPickUpLocation]= useState({
-  location:''
+  locationStart:[],
+  locationEnd:[],
+  locationStartLat:[],
+  locationStartLng:[],
+  locationEndLat:[],
+  locationEndLng:[]
 
 })
   return (
+    
     <div className="main">
+              <LocationContext.Provider value={{pickUpLocation, setPickUpLocation}}>
+
       <div className="nav-bar">
        <NavBar />
       </div>
@@ -46,7 +54,6 @@ const[pickUpLocation,  setPickUpLocation]= useState({
       <div className="map-container"><Map/></div>
       
       <div className="locater">
-        <LocationContext.Provider value={{pickUpLocation, setPickUpLocation}}>
         <Routes>
           <Route path="/Driver" element={<DriverHome />}/>
           <Route path="/Rider" element={<RiderHome/>}></Route>
@@ -54,12 +61,12 @@ const[pickUpLocation,  setPickUpLocation]= useState({
           <Route path="/PickupLocation" element={<PickupLocation/>}></Route>
 
         </Routes>
-        </LocationContext.Provider>
+        
       </div> 
 {/* 
 
        //can render th list of trips with map and event and have it props to a omp to display and return */}
-      
+      </LocationContext.Provider>
     </div>
   );
 }

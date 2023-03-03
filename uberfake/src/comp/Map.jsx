@@ -1,44 +1,51 @@
 
 import { useContext } from 'react';
+import { LocationContext } from '../App';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import { useEffect, useState } from "react"
 import mapboxgl from "mapbox-gl"
 import axios from 'axios';
 import { RxHeight } from 'react-icons/rx';
 import { useRef } from 'react';
+import { locationContext } from '../locationContext';
 
 
 export default function Map(){
+  const{pickUpLocation, setPickUpLocation}= useContext(LocationContext)
 
-  const[location,setLocation] = useState({
-    center:''
-  })
 
   
 const Token= `pk.eyJ1Ijoiam9zZXIxMTcxIiwiYSI6ImNsZW5hbXNudTFkYXgzeHF2bHpkcDJlOWQifQ.PC61kaqdxMq8ByRGyadaPQ`
 
 // https://api.mapbox.com/directions/v5/mapbox/driving/-84.518641,39.134270;-84.512023,39.102779?geometries=geojson&access_token=pk.eyJ1Ijoiam9zZXIxMTcxIiwiYSI6ImNsZW5hbXNudTFkYXgzeHF2bHpkcDJlOWQifQ.PC61kaqdxMq8ByRGyadaPQ 
 
-const changeLocation = () => {
 
-  setLocation({...location, center:'jose'})
-  console.log(location,'new2')
 
-}
 
-changeLocation()
 useEffect(()=>{
 
+  // const changeLocation = () => {
 
-  setLocation({...location, center:'jose'})
-  console.log(location,'new')
+  //   setLocation({...location, center:[-118.242766, 34.053691]})
+  //   // [-118.242766, 34.053691]
+  //   console.log(location,location.center[0],'new2')
+  //   console.log(location,location.center[1],'new2')
+  
+  // }
+  
+  
+  // changeLocation()
+
+
+
+  // console.log(location,'new')
 
 mapboxgl.accessToken = 'pk.eyJ1Ijoiam9zZXIxMTcxIiwiYSI6ImNsZW5hbXNudTFkYXgzeHF2bHpkcDJlOWQifQ.PC61kaqdxMq8ByRGyadaPQ';
 const map = new mapboxgl.Map({
   container: 'map',
   style: 'mapbox://styles/joser1171/clenayd4s002x01l0kvmf5t6g',
-  center: location.center, //-118.242766, 34.053691 //-122.662323, 45.523751 // starting position
-  zoom: 10
+  center: [-118.242766, 34.053691], //-118.242766, 34.053691 //-122.662323, 45.523751 // starting position
+  zoom: 8
 });
 // set the bounds of the map
 const bounds = [
@@ -49,8 +56,8 @@ map.setMaxBounds(bounds);
 
 // an arbitrary start will always be the same
 // only the end or destination will change
-const start = [-122.662323, 45.523751];
-
+const start = [pickUpLocation.locationStartLat, pickUpLocation.locationStartLng]; //-117.852787, 33.762934 //-122.662323, 45.523751
+console.log(start,'start')
 // this is where the code for the next step will go
 
 // create a function to make a directions request
@@ -143,11 +150,13 @@ map.on('click', (event) => {
         properties: {},
         geometry: {
           type: 'Point',
-          coordinates: coords
+          coordinates: [-118.24904893295182, 34.03427605147586]
         }
       }
     ]
   };
+  
+  console.log(coords)
   if (map.getLayer('end')) {
     map.getSource('end').setData(end);
   } else {
@@ -164,7 +173,7 @@ map.on('click', (event) => {
               properties: {},
               geometry: {
                 type: 'Point',
-                coordinates: coords
+                coordinates: [-118.24904893295182, 34.03427605147586]
               }
             }
           ]
@@ -176,11 +185,11 @@ map.on('click', (event) => {
       }
     });
   }
-  getRoute(coords);
+  getRoute([-118.24904893295182, 34.03427605147586]);
 });
 
 
-})
+},[])
 
 
 
