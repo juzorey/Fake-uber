@@ -1,31 +1,17 @@
-# project2
+# Project2: Peer to Peer RideShare
+## Current MVP
+As of now, its slightly broken. This project is in a low level MVP. The driver is the only one that can input a location and its only ' e 4th street los angeles'.
+The destination can't be inputed yet but it can be clicked anywhere and it will return a colored route.
 
-##sword fighting game
-special movies from api of anime or art
-canvas js
-catboy- https://catboys.com/api
-
-
-##music ring throw balls around and when it hits the walls it makes the sound
-the music api
-AI Mastering - https://aimastering.com/api_docs/
-Freesound- https://freesound.org/docs/api/
-canvas js
+##Yet to be Done
+The Driver has to be able to input their pickup location and destination to anywhere. Then copy that to the Rider. Connect the smart contract to allow blockchain transactions.
 
 
+##APIS
+Chainlink - https://chain.link/developer-resources
+MapBox.io - https://docs.mapbox.com/
 
-##ride share blockchain with dfs and bfs for the best way to get somwhere and visualizer
-peer to peer rideshare blockchain
-chainlink - https://chain.link/developer-resources
-nownodes- https://nownodes.io/
-
-##Transfering to driver and rider
--the information that is needed is
--the driver and the riders location at all times from 
--the history of the driver and the rider including feedback time 
-
-the wallet interacts with the contracts
-connect contract the the frontend
+##Pseudo code
 
 ##rider
 -sees ongoing rides
@@ -39,18 +25,6 @@ connect contract the the frontend
 -shows where they are currently when starting the drive
 - display how many seats they have open in the the object
 - shows the amount per seat in the object
-
-what should the contract do and what should javascript or other api do
-where should the location go instead
-
-use useEffect and useState and useContext
-making tabs with active and calenders
-how is useState being usedi multi comp i thought it was only for the app is it transferable?
-what is this.state how to add to state and to context
-using two states in same comp
-review through all the labs last week
-using usenavigate to go to diff comp
-
 
 ##Do Today 2/27/2023
 - Finish pseudo code for the logic
@@ -99,4 +73,24 @@ do they each have own contract and the money gets transfered to contract
 - when the rider gets to the drop locaiton of the rider both rider and driver confirm its the location and record the end of the trip for rider and driver
 - when ride check in which is the same as the trip ending, the active is changed to false and they can checkout another ride
 
+
+###Random notes
+##Transfering to driver and rider
+-the information that is needed is
+-the driver and the riders location at all times from 
+-the history of the driver and the rider including feedback time 
+
+the wallet interacts with the contracts
+connect contract the the frontend
+
+what should the contract do and what should javascript or other api do
+where should the location go instead
+
+use useEffect and useState and useContext
+making tabs with active and calenders
+how is useState being usedi multi comp i thought it was only for the app is it transferable?
+what is this.state how to add to state and to context
+using two states in same comp
+review through all the labs last week
+using usenavigate to go to diff comp
 
