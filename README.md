@@ -1,5 +1,6 @@
 # Project2: Peer to Peer RideShare
 ## Current MVP
+###STATUS: BROKEN
 As of now, its slightly broken. This project is in a low level MVP. The driver is the only one that can input a location and its only ' e 4th street los angeles'.
 The destination can't be inputed yet but it can be clicked anywhere and it will return a colored route.
 
