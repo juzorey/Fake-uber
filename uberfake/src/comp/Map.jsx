@@ -155,7 +155,7 @@ map.on('click', (event) => {
         properties: {},
         geometry: {
           type: 'Point',
-          coordinates: coords
+          coordinates: [pickUpLocation.locationEndLat,pickUpLocation.locationEndLng]
         }
       }
     ]
@@ -178,7 +178,7 @@ map.on('click', (event) => {
               properties: {},
               geometry: {
                 type: 'Point',
-                coordinates: coords
+                coordinates: [pickUpLocation.locationEndLat,pickUpLocation.locationEndLng]
               }
             }
           ]
@@ -190,7 +190,7 @@ map.on('click', (event) => {
       }
     });
   }
-  getRoute(coords);
+  getRoute([pickUpLocation.locationEndLat,pickUpLocation.locationEndLng]);
 });
 
 
