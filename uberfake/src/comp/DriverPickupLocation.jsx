@@ -29,9 +29,8 @@ const[localPickupLocation, setLocalPickupLocation] =useState({
 
 
       useEffect(()=>{
+      
 
-        setPickUpLocation({...pickUpLocation, 'locationStart':localPickupLocation.locationStart, 'locationEnd':localPickupLocation.locationEnd})
-     
         const getPickupLocationStart = async()=>{
 
           // if(pickUpLocation.locationStart === 'e 4th street los angeles'){
@@ -39,12 +38,12 @@ const[localPickupLocation, setLocalPickupLocation] =useState({
 
           console.log(pickUpLocation,'global new')  
             
-          const search_text = pickUpLocation.locationStart
+          const search_text = localPickupLocation.locationStart
           const res = await axios.get(`https://api.mapbox.com/geocoding/v5/mapbox.places/${search_text}.json?access_token=pk.eyJ1Ijoiam9zZXIxMTcxIiwiYSI6ImNsZW5hbXNudTFkYXgzeHF2bHpkcDJlOWQifQ.PC61kaqdxMq8ByRGyadaPQ`)
           
           console.log(res.data.features[0].center,'start') //res.data.features[0].bbox for bbox //res.data.features[0].center for the specific location
-          // setPickUpLocation({...pickUpLocation, locationStartLat:res.data.features[0].center[0], locationStartLng:res.data.features[0].center[1]})
-          // console.log(pickUpLocation,'on')
+          setPickUpLocation({...pickUpLocation, locationStartLat:res.data.features[0].center[0], locationStartLng:res.data.features[0].center[1]})
+          console.log(pickUpLocation,'start')
       
       
       
@@ -56,12 +55,12 @@ const[localPickupLocation, setLocalPickupLocation] =useState({
 
           console.log(pickUpLocation,'global new')  
             
-          const search_text = pickUpLocation.locationEnd
+          const search_text = localPickupLocation.locationEnd
           const res = await axios.get(`https://api.mapbox.com/geocoding/v5/mapbox.places/${search_text}.json?access_token=pk.eyJ1Ijoiam9zZXIxMTcxIiwiYSI6ImNsZW5hbXNudTFkYXgzeHF2bHpkcDJlOWQifQ.PC61kaqdxMq8ByRGyadaPQ`)
           
-          console.log(res.data.features[0].center,'end') //res.data.features[0].bbox for bbox //res.data.features[0].center for the specific location
-          // setPickUpLocation({...pickUpLocation, locationStartLat:res.data.features[0].center[0], locationStartLng:res.data.features[0].center[1]})
-          // console.log(pickUpLocation,'on')
+          console.log(res.data,'end') //res.data.features[0].bbox for bbox //res.data.features[0].center for the specific location
+          setPickUpLocation({...pickUpLocation, 'locationEndLat':res.data.features[0].center[0], 'locationEndLng':res.data.features[0].center[1]})
+          // console.log(pickUpLocation,'End')
       
       
       
@@ -78,6 +77,8 @@ const[localPickupLocation, setLocalPickupLocation] =useState({
       getPickupLocationStart()
       getPickupLocationEnd()
   
+      // setPickUpLocation({...pickUpLocation, 'locationStartLat':res.data.features[0].center[0], 'locationStartLng':res.data.features[0].center[1]})
+     
       },[localPickupLocation.locationEnd, localPickupLocation.locationStart])
 
 
