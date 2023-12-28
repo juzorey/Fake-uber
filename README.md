@@ -1,4 +1,4 @@
-# Project2: Peer to Peer RideShare
+# Fake-Uber: Peer to Peer RideShare
 ## Current MVP
 ### STATUS: BROKEN
 
@@ -13,7 +13,7 @@ The Driver has to be able to input their pickup location and destination to anyw
 Chainlink - https://chain.link/developer-resources
 MapBox.io - https://docs.mapbox.com/
 
-## Pseudo code
+
 
 ## rider
 -sees ongoing rides
@@ -28,7 +28,7 @@ MapBox.io - https://docs.mapbox.com/
 - display how many seats they have open in the the object
 - shows the amount per seat in the object
 
-## Do Today 2/27/2023
+## Do Today 12/27/2023
 - Finish pseudo code for the logic
 - Finsih riders and drivers wireframe- needs list of trips
 - know how will the contract be interacting with the way money is transfered 
@@ -76,7 +76,7 @@ do they each have own contract and the money gets transfered to contract
 - when ride check in which is the same as the trip ending, the active is changed to false and they can checkout another ride
 
 
-### Random notes
+
 ### Transfering to driver and rider
 -the information that is needed is
 -the driver and the riders location at all times from 
