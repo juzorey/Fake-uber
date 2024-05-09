@@ -1,6 +1,6 @@
 # Fake-Uber: Peer to Peer RideShare
 ## Current MVP
-### STATUS: BROKEN
+### STATUS: CURRENTLY UPGRADING
 
 As of now, its slightly broken. This project is in a low level MVP. The driver is the only one that can input a location and its only " e 4th street los angeles" and when its entered you have to hit backspace.
 The destination can't be inputed yet but it can be clicked anywhere and it will return a colored route.
